@@ -1,0 +1,13 @@
+**/*.config.js
+**/*.config.ts
+**/vite-env.d.ts
+README.md
+.github
+node_modules
+dist
+.husky
+.vscode
+/deploy
+.nvmrc
+.npmrc
+/public

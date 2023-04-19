@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "plugin:prettier/recommended",
+    "prettier/prettier",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "globals": {
+    "React": "readonly",
+    "JSX": true
+  },
+  "rules": {
+    "no-unused-vars": [1, { "args": "after-used", "argsIgnorePattern": "^_" }],
+    "react-hooks/exhaustive-deps": [
+      "warn",
+      {
+        "additionalHooks": "useRecoilCallback"
+      }
+    ],
+    "@typescript-eslint/no-empty-interface": [
+      "error",
+      {
+        "allowSingleExtends": false
+      }
+    ],
+    "react/prop-types": "off",
+    "react/display-name": "off"
+  },
+  "plugins": ["prettier", "@typescript-eslint"],
+  "overrides": [],
+  "ignorePatterns": ["nclk_*.js", "index.html", "src/utils/log/lcslog.js", "src/utils/log/nclk*.js"],
+  "parser": "@typescript-eslint/parser"
+}

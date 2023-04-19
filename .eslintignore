@@ -1,0 +1,14 @@
+/node_modules
+/.github
+/deploy
+/build
+/dist
+/.vscode
+/public
+**/*.config.js
+**/*.config.ts
+**/*.d.ts
+.nvmrc
+.npmrc
+/public
+.env.*
