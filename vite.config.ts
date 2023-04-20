@@ -1,7 +1,15 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
+import { chromeExtension } from "vite-plugin-chrome-extension";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  
+  build: {
+    rollupOptions: {
+      input: "./manifest.json"
+    },
+    minify: true
+  },
+  // @ts-ignore
+  plugins: [react(), chromeExtension()],
 })
